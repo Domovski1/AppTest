@@ -1,0 +1,13 @@
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\DateGenerator.exe.config
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\DateGenerator.exe
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\DateGenerator.pdb
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\EntityFramework.dll
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\EntityFramework.xml
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\obj\Debug\DateGenerator.csprojAssemblyReference.cache
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\obj\Debug\DateGenerator.csproj.CoreCompileInputs.cache
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\obj\Debug\DateGenerator.csproj.CopyComplete
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\obj\Debug\DateGenerator.exe
+C:\Users\Domovski\source\repos\DateGenerator\DateGenerator\obj\Debug\DateGenerator.pdb

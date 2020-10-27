@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище modelModelContainer" CdmEntityContainer="PhoneEntities">
+    <EntitySetMapping Name="Phone">
+      <EntityTypeMapping TypeName="modelModel.Phone">
+        <MappingFragment StoreEntitySet="Phone">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Compaby" ColumnName="Compaby" />
+          <ScalarProperty Name="myIMG" ColumnName="myIMG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="TestBaseModel22" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="TestApp" Relationship="Self.FK__TestApp__GroupID__403A8C7D" FromRole="Group" ToRole="TestApp" />
+  </EntityType>
+  <EntityType Name="Phone">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Compaby" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="myIMG" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TestApp">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK__TestApp__GroupID__403A8C7D" FromRole="TestApp" ToRole="Group" />
+  </EntityType>
+  <Association Name="FK__TestApp__GroupID__403A8C7D">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="TestApp" Type="Self.TestApp" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="TestApp">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="newModelApps" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Group" EntityType="Self.Group" />
+    <EntitySet Name="Phone" EntityType="Self.Phone" />
+    <EntitySet Name="TestApp" EntityType="Self.TestApp" />
+    <AssociationSet Name="FK__TestApp__GroupID__403A8C7D" Association="Self.FK__TestApp__GroupID__403A8C7D">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="TestApp" EntitySet="TestApp" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

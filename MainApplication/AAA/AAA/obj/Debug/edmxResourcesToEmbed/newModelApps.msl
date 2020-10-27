@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище TestBaseModel22Container" CdmEntityContainer="newModelApps">
+    <EntitySetMapping Name="Group">
+      <EntityTypeMapping TypeName="TestBaseModel22.Group">
+        <MappingFragment StoreEntitySet="Group">
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Phone">
+      <EntityTypeMapping TypeName="TestBaseModel22.Phone">
+        <MappingFragment StoreEntitySet="Phone">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="Compaby" ColumnName="Compaby" />
+          <ScalarProperty Name="myIMG" ColumnName="myIMG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TestApp">
+      <EntityTypeMapping TypeName="TestBaseModel22.TestApp">
+        <MappingFragment StoreEntitySet="TestApp">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Title" ColumnName="Title" />
+          <ScalarProperty Name="GroupID" ColumnName="GroupID" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

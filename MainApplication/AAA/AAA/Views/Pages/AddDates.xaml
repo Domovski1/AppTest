@@ -1,0 +1,37 @@
+﻿<Page x:Class="AAA.Views.Pages.AddDates"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:AAA.Views.Pages"
+      mc:Ignorable="d" Background="White"
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AddDates">
+    <Page.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0 5"/>
+        </Style>
+    </Page.Resources>
+
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+
+            <Image Height="200" Width="200"
+                   x:Name="imgBox"/>
+
+            <TextBlock Text="Название:"/>
+            <TextBox x:Name="txtName"/>
+            <TextBlock Text="GroupID:"/>
+            <TextBox x:Name="txtGroup"/>
+            <TextBlock Text="Размер: "/>
+            <TextBox x:Name="txtSize"/>
+
+            <StackPanel Orientation="Horizontal">
+                <Button Height="30" Width="100" Margin="0 0 5 0" Content="Добавить фото" 
+                        x:Name="btnAdd" Click="btnAdd_Click"/>
+                <Button Height="30" Width="100" Content="Сохранить"
+                        x:Name="btnSave" Click="btnSave_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Page>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ModeelBase" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Group">
+    <Key>
+      <PropertyRef Name="GroupID" />
+    </Key>
+    <Property Name="GroupID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="mainTable" Relationship="Self.FK__mainTable__Group__3A81B327" FromRole="Group" ToRole="mainTable" />
+  </EntityType>
+  <EntityType Name="mainTable">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="GroupID" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="Int32" Nullable="false" />
+    <Property Name="icon" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Group" Relationship="Self.FK__mainTable__Group__3A81B327" FromRole="mainTable" ToRole="Group" />
+  </EntityType>
+  <Association Name="FK__mainTable__Group__3A81B327">
+    <End Role="Group" Type="Self.Group" Multiplicity="1" />
+    <End Role="mainTable" Type="Self.mainTable" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Group">
+        <PropertyRef Name="GroupID" />
+      </Principal>
+      <Dependent Role="mainTable">
+        <PropertyRef Name="GroupID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="TestBaseEnt" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Group" EntityType="Self.Group" />
+    <EntitySet Name="mainTable" EntityType="Self.mainTable" />
+    <AssociationSet Name="FK__mainTable__Group__3A81B327" Association="Self.FK__mainTable__Group__3A81B327">
+      <End Role="Group" EntitySet="Group" />
+      <End Role="mainTable" EntitySet="mainTable" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
